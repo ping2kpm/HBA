@@ -1,0 +1,11 @@
+Enter file contents here
+HBAS=`ls /sys/class/scsi_host`
+
+for HBA in ${HBAS}
+do
+        # Check this HBA is a SAN card, and has a link
+        if [ -f /sys/class/scsi_host/${HBA}/state ]
+        then
+                echo "- - -" > /sys/class/scsi_host/${HBA}/scan
+        fi
+done
