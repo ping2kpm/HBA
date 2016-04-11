@@ -1,6 +1,6 @@
 Enter file contents here
+To_days_date=`date`
 HBAS=`ls /sys/class/scsi_host`
-
 for HBA in ${HBAS}
 do
         # Check this HBA is a SAN card, and has a link
