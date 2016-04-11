@@ -1,4 +1,5 @@
 Enter file contents here
+#This script will scan for new or existing luns
 To_days_date=`date`
 HBAS=`ls /sys/class/scsi_host`
 for HBA in ${HBAS}
